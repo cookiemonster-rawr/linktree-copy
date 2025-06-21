@@ -1,0 +1,168 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>@Ignite</title>
+</head>
+<body>
+
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="share-button">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="container">
+        <div class="profile-section">
+        <div class="image-container">
+            <img src="ignitelogo.png" alt="Ignite Logo">
+        </div>
+        <h1 class="username">@Ignite</h1>
+        <p class="bio">highschool survival guide</p>
+        </div>
+
+        <div class="links-container">
+            <a href="#" class="tile">
+                <div class="tile-content">
+                    <div class="tile-icon">
+                        <img src="ignitelogo.png" alt="ignite logo">
+                    </div>
+                    <p class="tile-text">Instagram</p>
+                    <div class="kebab-menu">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="1.5"/>
+                        <circle cx="12" cy="5" r="1.5"/>
+                        <circle cx="12" cy="19" r="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tile">
+                <div class="tile-content">
+                    <div class="tile-icon">
+                        <img src="ignitelogo.png" alt="ignite logo">
+                    </div>
+                    <p class="tile-text">website</p>
+                    <div class="kebab-menu">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="1.5"/>
+                        <circle cx="12" cy="5" r="1.5"/>
+                        <circle cx="12" cy="19" r="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tile">
+                <div class="tile-content">
+                    <div class="tile-icon">
+                        <img src="ignitelogo.png" alt="ignite logo">
+                    </div>
+                    <p class="tile-text">skibidi</p>
+                    <div class="kebab-menu">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="1.5"/>
+                        <circle cx="12" cy="5" r="1.5"/>
+                        <circle cx="12" cy="19" r="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@Ignite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="share-button" onclick="shareProfile()">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </button>
+
+  <div class="container">
+    <div class="profile-section">
+      <div class="image-container">
+        <img src="ignitelogo.png" alt="Ignite Logo" />
+      </div>
+      <h1 class="username">@Ignite</h1>
+      <p class="bio">highschool survival guide</p>
+    </div>
+
+    <div class="links-container">
+      <a href="#" class="tile">
+        <div class="tile-icon">
+          <img src="ignitelogo.png" alt="icon" />
+        </div>
+        <p class="tile-text">Instagram</p>
+        <div class="kebab-menu">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="5" r="1.5"/>
+            <circle cx="12" cy="19" r="1.5"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="#" class="tile">
+        <div class="tile-icon">
+          <img src="ignitelogo.png" alt="icon" />
+        </div>
+        <p class="tile-text">website</p>
+        <div class="kebab-menu">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="5" r="1.5"/>
+            <circle cx="12" cy="19" r="1.5"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="#" class="tile">
+        <div class="tile-icon">
+          <img src="ignitelogo.png" alt="icon" />
+        </div>
+        <p class="tile-text">skibidi</p>
+        <div class="kebab-menu">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="5" r="1.5"/>
+            <circle cx="12" cy="19" r="1.5"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function shareProfile() {
+      if (navigator.share) {
+        navigator.share({
+          title: '@Ignite',
+          text: 'Check out this highschool survival guide!',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Profile link copied to clipboard!');
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
