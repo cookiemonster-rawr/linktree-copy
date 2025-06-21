@@ -1,0 +1,381 @@
+/*/body {
+    margin: 0;
+    padding: 20px;
+    background-color: linear-gradient(135deg, #8b2a9b 0%, #6b1b7f 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.share-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color:  rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    gap: 3px;
+    z-index: 100;
+}
+
+.share-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+
+.share-button .dot {
+    width: 4px;
+    height: 4px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+header {
+    width: 95%;
+    max-width: 788px;
+    display: flex;
+    justify-content: flex-end;
+    padding : 12px;
+    margin-top: 15px;
+}
+
+.container {
+    width: 91%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin-top: 40px;
+}
+
+
+.tile {
+    width: 89.7%;
+    height: 4.2rem;
+    background-color: #ffcbd2;
+    color: black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 33.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 12px;
+    margin: 7px;
+    transition: transform 0.2s ease;
+}
+
+.tile:hover {
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+h1 {
+    margin-bottom:20px 0 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 16px;
+    color: #f0e6ff;
+    margin-bottom: 20px;
+}
+.image-container {
+    height: 120px;
+    width: 120px;
+    border-radius: 48px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+ 
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.5,1.5);
+    object-position:center ;
+}
+
+
+.tile .icon {
+    height: 46px;
+    width: 46px;
+    overflow: hidden;
+    transform: scale(1.5,1.5);
+    object-position:center 50% ;
+    border-radius: 50%;
+}
+
+.tile .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tile p{
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 8px;
+    text-align: center;
+}
+
+.kebab-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100% ;
+}
+
+.kebab-menu svg {
+    fill: BLACK;
+    height: 24px;
+}
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #8b2a9b 0%, #6b1b7f 100%);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 16px;
+  padding-top: 80px; /* Space for fixed button */
+}
+
+.container {
+  width: 100%;
+  max-width: 510px;
+  padding: 0;
+}
+
+/* Profile */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  gap: 12px;
+  margin-left: 32px; /* Fine-tune alignment with tile text */
+}
+
+.image-container {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5,1.5);
+}
+
+.username {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bio {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Tiles */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 580 / 67.2;
+  background: linear-gradient(135deg, #ffd6e8 0%, #ffb3d1 100%);
+  border-radius: 34px;
+  padding: 0 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.tile:hover::before {
+    opacity: 1;
+}
+
+.tile:active {
+    transform: translateY(0);
+}
+
+.tile-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.tile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5,1.5);
+}
+
+.tile-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 1;
+  color: #333;
+}
+
+.kebab-menu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  z-index: 1;
+  color: #333;
+}
+
+/* Share button - IMPROVED */
+.share-button {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 3px;
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.share-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+.share-button .dot {
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.share-button:hover .dot {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  .username {
+    font-size: 20px;
+  }
+
+  .bio {
+    font-size: 14px;
+  }
+
+  .tile-text {
+    font-size: 0.95rem;
+  }
+
+  .tile {
+    padding: 0 12px;
+  }
+
+  .tile-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .share-button {
+    width: 44px;
+    height: 44px;
+    top: 20px;
+    right: 20px;
+  }
+}
