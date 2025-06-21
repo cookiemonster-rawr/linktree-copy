@@ -15,7 +15,7 @@ body {
 .container {
   width: 100%;
   max-width: 510px;
-  padding: 0;
+  padding: 0 16px;
 }
 
 /* Profile */
@@ -197,8 +197,11 @@ body {
 /* Responsive */
 @media (max-width: 480px) {
   body {
-    padding-top: 70px 20px;
+    padding-top: 70px;
   }
+
+  .container {
+     padding: 0 20px;
   
   .username {
     font-size: 20px;
