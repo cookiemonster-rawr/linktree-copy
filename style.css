@@ -15,7 +15,7 @@ body {
 .container {
   width: 100%;
   max-width: 510px;
-  padding: 0 16px;
+  padding: 0;
 }
 
 /* Profile */
@@ -69,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 91%;
   height: 12vw;
   background: linear-gradient(135deg, #ffd6e8 0%, #ffb3d1 100%);
   border-radius: 34px;
@@ -198,10 +198,6 @@ body {
 @media (max-width: 480px) {
   body {
     padding-top: 70px;
-  }
-
-  .container {
-     padding: 0 20px;
   }
   
   .username {
